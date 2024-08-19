@@ -1,5 +1,11 @@
-package com.amazon.stock_service.stock.domain.apis;
+package com.amazon.stock_service.stock.domain.api;
 
-public class ICategoryServicePort {
+import com.amazon.stock_service.stock.domain.model.Category;
+
+import java.util.List;
+
+public interface ICategoryServicePort {
+
+    void saveCategory(Category category);
 
 }

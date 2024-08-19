@@ -1,4 +1,10 @@
 package com.amazon.stock_service.stock.domain.spi;
 
-public interface ICategoryPersintencePort {
+import com.amazon.stock_service.stock.domain.model.Category;
+
+import java.util.List;
+
+public interface ICategoryPersistencePort {
+
+    void saveCategory(Category category);
 }
