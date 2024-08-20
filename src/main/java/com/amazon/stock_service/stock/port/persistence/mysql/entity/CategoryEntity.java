@@ -1,4 +1,4 @@
-package com.amazon.stock_service.stock.infraestructure.out.jpa.entity;
+package com.amazon.stock_service.stock.port.persistence.mysql.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

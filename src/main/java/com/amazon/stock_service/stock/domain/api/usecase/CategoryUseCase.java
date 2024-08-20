@@ -1,4 +1,4 @@
-package com.amazon.stock_service.stock.domain.usecase;
+package com.amazon.stock_service.stock.domain.api.usecase;
 
 import com.amazon.stock_service.stock.domain.api.ICategoryServicePort;
 import com.amazon.stock_service.stock.domain.model.Category;

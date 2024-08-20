@@ -1,7 +1,7 @@
-package com.amazon.stock_service.stock.infraestructure.inputrest;
+package com.amazon.stock_service.stock.port.application.controller;
 
-import com.amazon.stock_service.stock.application.dto.StockRequest;
-import com.amazon.stock_service.stock.application.handler.IStockHandler;
+import com.amazon.stock_service.stock.port.application.dto.StockRequest;
+import com.amazon.stock_service.stock.port.application.handler.IStockHandler;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;

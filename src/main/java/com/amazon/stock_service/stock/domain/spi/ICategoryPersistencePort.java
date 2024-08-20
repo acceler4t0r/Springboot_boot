@@ -7,4 +7,8 @@ import java.util.List;
 public interface ICategoryPersistencePort {
 
     void saveCategory(Category category);
+
+    void validateName(String name);
+
+    void validateDescription(String description);
 }

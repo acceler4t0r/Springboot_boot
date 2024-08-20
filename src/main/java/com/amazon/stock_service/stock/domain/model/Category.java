@@ -1,7 +1,6 @@
 package com.amazon.stock_service.stock.domain.model;
 
 public class Category {
-//Hacer aqui validaciones de name y desc
     private Long id;
     private String name;
     private String description;
@@ -35,4 +34,6 @@ public class Category {
     public void setDescription(String description) {
         this.description = description;
     }
+
+
 }

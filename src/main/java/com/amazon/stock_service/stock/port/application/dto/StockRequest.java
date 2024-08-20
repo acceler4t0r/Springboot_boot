@@ -1,4 +1,4 @@
-package com.amazon.stock_service.stock.application.dto;
+package com.amazon.stock_service.stock.port.application.dto;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -6,7 +6,6 @@ import lombok.Setter;
 @Getter
 @Setter
 public class StockRequest {
-    private Long id;
     private String name;
     private String description;
 }

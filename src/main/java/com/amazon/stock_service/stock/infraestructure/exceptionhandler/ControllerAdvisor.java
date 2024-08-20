@@ -1,8 +1,10 @@
 package com.amazon.stock_service.stock.infraestructure.exceptionhandler;
 
-import com.amazon.stock_service.stock.infraestructure.exception.CategoryAlreadyExistsException;
-import com.amazon.stock_service.stock.infraestructure.exception.CategoryNotFoundException;
-import com.amazon.stock_service.stock.infraestructure.exception.NoDataFoundException;
+import com.amazon.stock_service.stock.domain.exception.CategoryValidationException;
+import com.amazon.stock_service.stock.domain.exceptionhandler.category.ExceptionResponse;
+import com.amazon.stock_service.stock.domain.exception.CategoryAlreadyExistsException;
+import com.amazon.stock_service.stock.domain.exception.CategoryNotFoundException;
+import com.amazon.stock_service.stock.domain.exception.NoDataFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -35,6 +37,20 @@ public class ControllerAdvisor {
             CategoryNotFoundException categoryNotFoundException){
         return ResponseEntity.status(HttpStatus.NOT_FOUND)
                 .body(Collections.singletonMap(MESSAGE, ExceptionResponse.CATEGORY_NOT_FOUND.getMessage()));
+    }
+
+    @ExceptionHandler(CategoryValidationException.class)
+    public ResponseEntity<Map<String, String>> handleIllegalArgumentException(
+            CategoryValidationException categoryValidationException){
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST)
+                .body(Collections.singletonMap(MESSAGE, categoryValidationException.getMessage()));
+    }
+
+    @ExceptionHandler(EmptyFieldException.class)
+    public ResponseEntity<Map<String, String>> handleEmptyFieldException(
+            EmptyFieldException emptyFieldException){
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST)
+                .body(Collections.singletonMap(MESSAGE, emptyFieldException.getMessage()));
     }
 
 }

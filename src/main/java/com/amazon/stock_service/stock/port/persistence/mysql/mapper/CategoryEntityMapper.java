@@ -1,7 +1,7 @@
-package com.amazon.stock_service.stock.infraestructure.out.jpa.mapper;
+package com.amazon.stock_service.stock.port.persistence.mysql.mapper;
 
 import com.amazon.stock_service.stock.domain.model.Category;
-import com.amazon.stock_service.stock.infraestructure.out.jpa.entity.CategoryEntity;
+import com.amazon.stock_service.stock.port.persistence.mysql.entity.CategoryEntity;
 import org.mapstruct.Mapper;
 import org.mapstruct.ReportingPolicy;
 

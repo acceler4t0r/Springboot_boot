@@ -1,6 +1,6 @@
-package com.amazon.stock_service.stock.infraestructure.out.jpa.repository;
+package com.amazon.stock_service.stock.port.persistence.mysql.repository;
 
-import com.amazon.stock_service.stock.infraestructure.out.jpa.entity.CategoryEntity;
+import com.amazon.stock_service.stock.port.persistence.mysql.entity.CategoryEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;
