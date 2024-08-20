@@ -46,11 +46,4 @@ public class ControllerAdvisor {
                 .body(Collections.singletonMap(MESSAGE, categoryValidationException.getMessage()));
     }
 
-    @ExceptionHandler(EmptyFieldException.class)
-    public ResponseEntity<Map<String, String>> handleEmptyFieldException(
-            EmptyFieldException emptyFieldException){
-        return ResponseEntity.status(HttpStatus.BAD_REQUEST)
-                .body(Collections.singletonMap(MESSAGE, emptyFieldException.getMessage()));
-    }
-
 }

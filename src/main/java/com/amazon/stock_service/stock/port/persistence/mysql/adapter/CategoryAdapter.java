@@ -4,12 +4,10 @@ import com.amazon.stock_service.stock.domain.exception.CategoryValidationExcepti
 import com.amazon.stock_service.stock.domain.model.Category;
 import com.amazon.stock_service.stock.domain.spi.ICategoryPersistencePort;
 import com.amazon.stock_service.stock.domain.exception.CategoryAlreadyExistsException;
-import com.amazon.stock_service.stock.port.persistence.mysql.entity.CategoryEntity;
 import com.amazon.stock_service.stock.port.persistence.mysql.mapper.CategoryEntityMapper;
 import com.amazon.stock_service.stock.port.persistence.mysql.repository.ICategoryRepository;
 import lombok.RequiredArgsConstructor;
 
-import java.util.Optional;
 
 @RequiredArgsConstructor
 public class CategoryAdapter implements ICategoryPersistencePort {
