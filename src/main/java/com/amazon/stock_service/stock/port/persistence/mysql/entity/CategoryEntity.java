@@ -22,6 +22,6 @@ public class CategoryEntity {
     @Column(name = "cat_name", length = 50, nullable = false)
     private String name;
 
-    @Column(name = "cat_description", length = 50, nullable = false)
+    @Column(name = "cat_description", length = 90, nullable = false)
     private String description;
 }
